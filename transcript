@@ -1,0 +1,23 @@
+# Compile of apb_gpio.sv was successful.
+# Compile of apb_gpio_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.apb_gpio_tb
+# vsim -gui work.apb_gpio_tb 
+# Start time: 17:07:16 on Aug 30,2026
+# Loading sv_std.std
+# Loading work.apb_gpio_tb
+# Loading work.apb_gpio
+add wave *
+run 500 ns 
+# TEST 1: Writing CTRL = 1
+# TEST 2: Writing GPIO_OUT = A5
+# TEST 3: Reading GPIO_OUT
+# READ DATA = 000000a5
+# PASS: GPIO_OUT read correctly
+# TEST 4: Reading GPIO_IN
+# READ GPIO_IN = 0000003c
+# PASS: GPIO_IN read correctly
+# TEST 5: Reading invalid address
+# INVALID ADDRESS DATA = 00000000
+# PASS: Invalid address handled
+# APB GPIO TEST COMPLETED
